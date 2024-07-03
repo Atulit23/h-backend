@@ -16,49 +16,6 @@ const port = 8000;
 app.use(express.json());
 app.use(cors());
 
-/*
-const jwt = require('jsonwebtoken');
-const secretKey = 'your_secret_key'; // Use an environment variable in production
-
-app.post("/login", async (req, res) => {
-  const data = req.body;
-  const user = await UserDetails.findOne({ mobileNumber: data.mobileNumber });
-
-  if (!user) {
-    return res.status(400).send({ message: "Invalid mobile number" });
-  }
-
-  const currentUser = await UserDetails.findOne({ mobileNumber: data.mobileNumber, pin: data.pin });
-
-  if (!currentUser) {
-    return res.status(400).send({ message: "Incorrect pin" });
-  }
-
-  // Generate a token
-  const token = jwt.sign({ userId: currentUser._id }, secretKey, { expiresIn: '1h' });
-
-  return res.status(200).send({ message: "Login successful", token });
-});
-
-// Token-based authentication
-app.post("/token-login", async (req, res) => {
-  const { token } = req.body;
-
-  try {
-    const decoded = jwt.verify(token, secretKey);
-    const user = await UserDetails.findById(decoded.userId);
-
-    if (!user) {
-      return res.status(400).send({ message: "Invalid token" });
-    }
-
-    return res.status(200).send({ message: "Login successful" });
-  } catch (error) {
-    return res.status(400).send({ message: "Invalid token" });
-  }
-});
-*/
-
 // login
 app.post("/login", async (req, res) => {
   const data = req.body;
