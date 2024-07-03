@@ -46,7 +46,6 @@ const UserDetailsSchema = new Schema({
         date: { type: Date, default: Date.now },
         tags: { type: [String], default: [] },
         reportData: { type: Array, default: [] },
-        // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() }, // Unique ID generation
       },
     ],
   },
@@ -62,14 +61,12 @@ const UserDetailsSchema = new Schema({
           date: { type: Date, default: Date.now },
           tags: { type: [String], default: [] },
           reportData: { type: Array, default: [] },
-          // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() },
         },
       ],
       relationship: { type: String },
       bloodGroup: { type: String },
       dob: { type: Date },
       mobileNumber: { type: String },
-      // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() },
     },
   ],
   bloodGroup: {
@@ -84,7 +81,6 @@ const UserDetailsSchema = new Schema({
       severity: { type: String, required: false },
       medications: { type: [String], default: [] },
       notes: { type: String, required: false },
-      // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() },
     },
   ],
   familyMedicalConditions: [
@@ -94,7 +90,6 @@ const UserDetailsSchema = new Schema({
       diagnosedDate: { type: Date, required: false },
       severity: { type: String, required: false },
       notes: { type: String, required: false },
-      // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() },
     },
   ],
   appointmentHistory: {
@@ -124,7 +119,6 @@ const UserDetailsSchema = new Schema({
       diagnosedDate: { type: Date, required: false },
       notes: { type: String, required: false },
       name: { type: String, required: false },
-      // id: { type: String, default: () => new mongoose.Types.ObjectId().toString() },
     },
   ],
 });
